@@ -25,6 +25,7 @@ jobs:
         run: |
           npm install
           npm run build --if-present
+          npm run test --if-present
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
@@ -57,5 +58,5 @@ jobs:
         with:
           app-name: 'moviebookingfrontendapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F5D1F94A5A2F4B31B7162C8CEC248988 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A4D7FC3F8BB4432DAA16AE5C71F84FF4 }}
           package: .
